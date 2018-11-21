@@ -37,175 +37,403 @@
 
 
 
+
+
+
+    <!-- Tabs -->
+
+    <br>
     <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#tab1"><i class="material-icons">insert_chart</i>Administrator Dashboard</a></li>
+          <li class="tab col s3"><a  href="#test2"><i class="material-icons">notifications</i>Alerts</a></li>
+          <li class="tab col s3"><a href="#test3"><i class="material-icons">assignment</i>Reports</a></li>
+          <li class="tab col s3"><a href="#test4"><i class="material-icons">insert_chart</i>Service Dashboard</a></li>
+        </ul>
+      </div>
+      <div id="test2" class="col s12">Tab 2</div>
+      <div id="test3" class="col s12">Tab 3</div>
+      <div id="test4" class="col s12">Tab 4</div>
+    </div>
 
-      <div class="col s3">
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>- ALL -</option>
-            <option value="1">Good</option>
-            <option value="2">Bad</option>
-            <option value="3">Very Bad</option>
-          </select>
-          <label>Model Category</label>
+
+
+
+
+
+    <div id="tab1">
+
+
+
+      <div class="row">
+
+        <div class="col s3">
+          <div class="input-field">
+            <select>
+              <option value="" disabled selected>- ALL -</option>
+              <option value="1">Good</option>
+              <option value="2">Bad</option>
+              <option value="3">Very Bad</option>
+            </select>
+            <label>Model Category</label>
+          </div>
         </div>
-      </div>
 
-      <div class="col s3">
-        <div class="input-field">
-          <input placeholder="Placeholder" id="regd_name" type="text" class="validate">
-          <label for="regd_name">Regd No.</label>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="Placeholder" id="regd_name" type="text" class="validate">
+            <label for="regd_name">Regd No.</label>
+          </div>
         </div>
-      </div>
 
-      <div class="col s3">
-        <div class="input-field">
-          <input placeholder="Placeholder" id="from_date" type="text" class="validate">
-          <label for="from_date">From Date</label>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="Placeholder" id="from_date" type="text" class="validate">
+            <label for="from_date">From Date</label>
+          </div>
         </div>
-      </div>
 
 
-      <div class="col s3">
-        <div class="input-field">
-          <input placeholder="Placeholder" id="to_date" type="text" class="validate">
-          <label for="to_date">To Date</label>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="Placeholder" id="to_date" type="text" class="validate">
+            <label for="to_date">To Date</label>
+          </div>
         </div>
-      </div>
 
-      <div class="col s3">
-        <div class="input-field">
-          <input placeholder="Chassis number" id="chassis_no" type="text" class="validate">
-          <label for="chassis_no">Chassis No.</label>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="Chassis number" id="chassis_no" type="text" class="validate">
+            <label for="chassis_no">Chassis No.</label>
+          </div>
         </div>
-      </div>
 
-      <div class="col s3">
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>- ALL -</option>
-            <option value="1">Good</option>
-            <option value="2">Bad</option>
-            <option value="3">Very Bad</option>
-          </select>
-          <label>Status</label>
+        <div class="col s3">
+          <div class="input-field">
+            <select>
+              <option value="" disabled selected>- ALL -</option>
+              <option value="1">Good</option>
+              <option value="2">Bad</option>
+              <option value="3">Very Bad</option>
+            </select>
+            <label>Status</label>
+          </div>
         </div>
-      </div>
 
 
-      <div class="col s3">
-        <a class="waves-effect waves-light btn-small"><i class="material-icons left">search</i>Find</a>
+        <div class="col s3">
+          <a class="waves-effect waves-light btn-small"><i class="material-icons left">search</i>Find</a>
+        </div>
+
+
       </div>
+
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>Chassis Number</th>
+            <th>Model Category</th>
+            <th>Registration no.</th>
+            <th>Subscription Date.</th>
+            <th>Sub. Renewal Date.</th>
+            <th>Due Payment</th>
+            <th>
+
+              <div class="input-field col s1">
+                <select>
+                  <option value="" disabled selected>- ALL -</option>
+                  <option value="1">Good</option>
+                  <option value="2">Bad</option>
+                  <option value="3">Very Bad</option>
+                </select>
+                <label>Status</label>
+              </div>
+
+
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td>Car</td>
+            <td>TR45858</td>
+            <td>3/02/2018</td>
+            <td>3/09/2018</td>
+            <td>Rs. 3000</td>
+            <td>Good</td>
+          </tr>
+        </tbody>
+      </table>
+
 
 
     </div>
 
-    <table class="striped">
-      <thead>
-        <tr>
-          <th>Chassis Number</th>
-          <th>Model Category</th>
-          <th>Registration no.</th>
-          <th>Subscription Date.</th>
-          <th>Sub. Renewal Date.</th>
-          <th>Due Payment</th>
-          <th>
-
-            <div class="input-field col s1">
-              <select>
-                <option value="" disabled selected>- ALL -</option>
-                <option value="1">Good</option>
-                <option value="2">Bad</option>
-                <option value="3">Very Bad</option>
-              </select>
-              <label>Status</label>
-            </div>
-
-
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-        <tr>
-          <td>555845</td>
-          <td>Car</td>
-          <td>TR45858</td>
-          <td>3/02/2018</td>
-          <td>3/09/2018</td>
-          <td>Rs. 3000</td>
-          <td>Good</td>
-        </tr>
-      </tbody>
-    </table>
 
 
 
+    <!-- Modal Structure -->
+    <div id="customer-report-modal" class="modal">
+      <div class="modal-content">
+        <h4>Customer Report</h4>
+
+        <div class="divider"></div>
+
+        <div class="row">
+
+          <div class="col s2">
+            Name :
+          </div>
+
+          <div class="col s2">
+            John Doe
+          </div>
+
+          <div class="col s2">
+            Customer<br> Contact :
+          </div>
+
+          <div class="col s2">
+            85458458
+          </div>
+
+          <div class="col s2">
+            Address :
+          </div>
+
+
+          <div class="col s2">
+            MG Road
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col s2">
+            Chassis<br> Number :
+          </div>
+
+          <div class="col s2">
+            5586895
+          </div>
+
+          <div class="col s2">
+            Model<br> Category :
+          </div>
+
+          <div class="col s2">
+            Bus
+          </div>
+
+          <div class="col s2">
+            Model Code :
+          </div>
+
+          <div class="col s2">
+            5585
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col s2">
+            Registration<br>Number :
+          </div>
+
+
+          <div class="col s2">
+            T1234/256
+          </div>
+
+          <div class="col s2">
+            Subscription<br> Date :
+          </div>
+
+
+          <div class="col s2">
+            12/04/2018
+          </div>
+
+          <div class="col s2">
+            Sub Renewal<br> Date :
+          </div>
+
+
+          <div class="col s2">
+            John Doe
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col s2">
+            Due<br> Payment :
+          </div>
+
+          <div class="col s2">
+            Rs 3000
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="divider"></div>
+
+
+      <div class="section">
+
+        <h6 class="flow-text">Pollution Parameters</h6>
+        <div class="divider"></div>
+
+
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Date</th>
+              <th>CO</th>
+              <th>CO2</th>
+              <th>Other Hydro-<br>carbons</th>
+              <th>Fine Charges</th>
+              <th>Due <br>Payment Date</th>
+              <th>Total Amount</th>
+              <th>Ticket Id</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td>22:40</td>
+            <td>22/02/2018</td>
+            <td>32</td>
+            <td>44</td>
+            <td>34</td>
+            <td>Rs. 3000</td>
+            <td>23/07/2018</td>
+            <td>Rs 3000</td>
+            <td>TRQ3322142323</td>
+          </tr>
+
+        </table>
+
+
+      </div>
+
+
+      <div class="divider"></div>
+
+      <div class="section">
+
+
+
+        <h6 class="flow-text">Payment History</h6>
+        <div class="divider"></div>
+
+
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Date</th>
+              <th>Total Amount</th>
+              <th>Payment Method</th>
+              <th>Payment Reference No.</th>
+              <th>Due Balance</th>
+              <th>Ticket Id</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td>22:40</td>
+            <td>22/02/2018</td>
+            <td>Rs 3000</td>
+            <td>Cash</td>
+            <td>RNC44232355/234</td>
+            <td>Rs. 3000</td>
+            <td>TRQ3322142323</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+
+      <div class="divider"></div>
 
 
 
 
 
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
 
 
 
 
-
-
+    </div>
 
 
 
@@ -221,6 +449,12 @@
 
 
 
+
+
+
+
+
+  <br>
 
 
 
@@ -256,7 +490,18 @@
       };
       var elems = document.querySelectorAll('select');
       var instances = M.FormSelect.init(elems, options);
-      var instance = M.FormSelect.getInstance(elem);
+      //var instance = M.FormSelect.getInstance(elem);
+
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+
+      var el = document.querySelectorAll('.tabs');
+      var instance = M.Tabs.init(el, options);
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+
     });
   </script>
 
