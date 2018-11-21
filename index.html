@@ -46,8 +46,9 @@
     <div class="row">
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#tab1"><i class="material-icons">insert_chart</i>Administrator Dashboard</a></li>
-          <li class="tab col s3"><a  href="#test2"><i class="material-icons">notifications</i>Alerts</a></li>
+          <li class="tab col s3"><a class="active" href="#tab1"><i class="material-icons">insert_chart</i>Administrator
+              Dashboard</a></li>
+          <li class="tab col s3"><a href="#test2"><i class="material-icons">notifications</i>Alerts</a></li>
           <li class="tab col s3"><a href="#test3"><i class="material-icons">assignment</i>Reports</a></li>
           <li class="tab col s3"><a href="#test4"><i class="material-icons">insert_chart</i>Service Dashboard</a></li>
         </ul>
@@ -66,15 +67,96 @@
 
 
 
+      <button data-target="add-new-modal" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Add
+        New
+        <i class="material-icons right">add_circle_outline</i>
+      </button>
+
+
+
+      <!-- Modal Structure -->
+      <div id="add-new-modal" class="modal">
+        <div class="modal-content">
+          <h4>Register Customer Vehicle</h4>
+
+          <div class="divider"></div>
+
+
+          <div class="row">
+
+            <div class="col s6">
+              <div class="input-field">
+                <input placeholder="Mobile Number" id="mobile_number" type="text" class="validate">
+                <label for="mobile_number">Mobile Number</label>
+              </div>
+            </div>
+
+
+            <div class="col s6">
+              <div class="input-field">
+                <input placeholder="Chassis Number" id="chassis_number" type="text" class="validate">
+                <label for="chassis_number">Chassis Number</label>
+              </div>
+            </div>
+
+
+            <div class="col s6">
+              <div class="input-field">
+                <input placeholder="Customer Name" id="customer_name" type="text" class="validate">
+                <label for="customer_name">Customer Name</label>
+              </div>
+            </div>
+
+
+            <div class="col s6">
+              <div class="input-field">
+                <input placeholder="Email" id="email" type="text" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <button data-target="add-new-modal" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Submit
+              <i class="material-icons right">add_circle_outline</i>
+            </button>
+
+
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+      <br>
+      <br>
+
       <div class="row">
 
         <div class="col s3">
           <div class="input-field">
             <select>
               <option value="" disabled selected>- ALL -</option>
-              <option value="1">Good</option>
-              <option value="2">Bad</option>
-              <option value="3">Very Bad</option>
+              <option value="1">Car</option>
+              <option value="2">Bus</option>
+              <option value="3">Truck</option>
+              <option value="4">Motorcycle</option>
             </select>
             <label>Model Category</label>
           </div>
@@ -157,67 +239,67 @@
 
         <tbody>
           <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555835</a></td>
             <td>Car</td>
             <td>TR45858</td>
             <td>3/02/2018</td>
-            <td>3/09/2018</td>
+            <td>9/09/2018</td>
+            <td>Rs. 3120</td>
+            <td>Bad</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">554845</a></td>
+            <td>Bus</td>
+            <td>TR45868</td>
+            <td>2/02/2018</td>
+            <td>8/09/2018</td>
+            <td>Rs. 3300</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">755845</a></td>
+            <td>Truck</td>
+            <td>TR45898</td>
+            <td>5/02/2018</td>
+            <td>1/09/2018</td>
+            <td>Rs. 3500</td>
+            <td>Good</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">555545</a></td>
+            <td>Motorcycle</td>
+            <td>TR43586</td>
+            <td>4/02/2018</td>
+            <td>13/09/2018</td>
+            <td>Rs. 3800</td>
+            <td>Very Bad</td>
+          </tr>
+          <tr>
+            <td> <a class="modal-trigger" href="#customer-report-modal">515845</a></td>
+            <td>Car</td>
+            <td>TR35858</td>
+            <td>7/02/2018</td>
+            <td>12/09/2018</td>
             <td>Rs. 3000</td>
             <td>Good</td>
           </tr>
           <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
+            <td> <a class="modal-trigger" href="#customer-report-modal">255845</a></td>
             <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
+            <td>TR45558</td>
+            <td>9/02/2018</td>
+            <td>7/09/2018</td>
+            <td>Rs. 3420</td>
             <td>Good</td>
           </tr>
           <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
-            <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
-            <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
-            <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
-            <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td> <a class="modal-trigger" href="#customer-report-modal">555845</a></td>
-            <td>Car</td>
-            <td>TR45858</td>
-            <td>3/02/2018</td>
-            <td>3/09/2018</td>
-            <td>Rs. 3000</td>
-            <td>Good</td>
+            <td> <a class="modal-trigger" href="#customer-report-modal">955845</a></td>
+            <td>Truck</td>
+            <td>TR45158</td>
+            <td>5/02/2018</td>
+            <td>2/09/2018</td>
+            <td>Rs. 3910</td>
+            <td>Bad</td>
           </tr>
         </tbody>
       </table>
@@ -464,7 +546,7 @@
 
     <div class="footer-copyright">
       <div class="container">
-        © 2014 Copyright Text
+        © 2018 Copyright Text
         <a class="grey-text text-lighten-4 right" href="#!">Best Viewed in Firefox and Chrome</a>
       </div>
     </div>
