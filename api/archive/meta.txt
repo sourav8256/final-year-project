@@ -1,0 +1,7 @@
+current working url
+
+http://localhost/education/final_year_project/api/
+
+
+
+http://localhost/education/final_year_project/api/savePollutionData.php?username=newu
