@@ -1,5 +1,15 @@
 <?php
 
+/* 
+Quick test url
+
+http://localhost/education/final_year_project/api/getPollutionData.php
+
+curl http://vehicleinfo.orgfree.com/intel/api/getPollutionData.php
+
+*/
+
+
 include_once "database.php";
 
 try {
