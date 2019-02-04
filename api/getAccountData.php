@@ -3,9 +3,9 @@
 /* 
 Quick test url
 
-curl http://localhost/education/final_year_project/api/getPollutionData.php
+http://localhost/education/final_year_project/api/getAccountData.php
 
-curl http://vehicleinfo.orgfree.com/intel/api/getPollutionData.php
+curl http://vehicleinfo.orgfree.com/intel/api/getAccountData.php
 
 */
 
@@ -14,7 +14,7 @@ include_once "database.php";
 
 try {
 
-    $query = DB::query("SELECT * FROM poll_data");
+    $query = DB::query("SELECT * FROM account_data");
     foreach($query as $row){
         $result['data'][] = $row;
     }

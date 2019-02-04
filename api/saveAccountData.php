@@ -13,9 +13,9 @@ $_GET['serial'] = 15; */
 /* 
 Quick test url
 
-curl "http://localhost/education/final_year_project/api/savePollutionData.php?chassisNumber=212&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
+http://localhost/education/final_year_project/api/saveAccountData.php?chassisNumber=212&modelCategory=2234&registrationNumber=2234&subscriptionDate=2234&subRenewalDate=2234&duePayment=2234&status=good
 
-curl "http://vehicleinfo.orgfree.com/intel/api/savePollutionData.php?chassisNumber=212&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
+curl "http://vehicleinfo.orgfree.com/intel/api/saveAccountData.php?chassisNumber=212&modelCategory=2234&registrationNumber=2234&subscriptionDate=2234&subRenewalDate=2234&duePayment=2234&status=good"
 
 */
 
@@ -24,16 +24,12 @@ curl "http://vehicleinfo.orgfree.com/intel/api/savePollutionData.php?chassisNumb
 try {
 
  $pollutionData = array();      
- foreach (DBInfo::POLLUTION_FIELDS as $field) {
-    if($_GET[$field]!=null){ 
+ foreach (DBInfo::ACCOUNT_FIELDS as $field) { 
     $pollutionData[$field] = $_GET[$field];
-    } else {
-      $pollutionData[$field] = "NULL";
-    }
  }
 
 
- $query = DB::insertUpdate('poll_data', $pollutionData);
+ $query = DB::insertUpdate('account_data', $pollutionData);
 
 //  $query = DB::insertUpdate('account_data', array(
 //   'serial' => !empty($_GET['serial']) ? $_GET['serial'] : null,
@@ -50,7 +46,7 @@ try {
 
 if ($query) {
  $result['result'] = 1;
- $result['message'] = "values saved successfully";
+ $result['message'] = "values fetched successfully";
 } else {
 
  $result['result'] = 0;

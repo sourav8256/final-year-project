@@ -2,17 +2,17 @@
 
 class DBInfo {
 
-/*     const HOST = "";
+    const HOST = "";
 const USERNAME = "root";
 const PASSWORD = "";
 const DBNAME = "final_year_project";
- */
- const HOST = "localhost";
+
+/*  const HOST = "localhost";
  const USERNAME = "1374370";
  const PASSWORD = "finalYearPass";
- const DBNAME = "1374370";
+ const DBNAME = "1374370"; */
 
- const FIELDS = array(
+ const ACCOUNT_FIELDS = array(
   'chassisNumber',
   'modelCategory',
   'registrationNumber',
@@ -21,6 +21,22 @@ const DBNAME = "final_year_project";
   'duePayment',
   'status',
  );
+
+
+ const POLLUTION_FIELDS = array(
+    'chassisNumber',
+    'time',
+    'date',
+    'co',
+    'co2',
+    'hydro-carbons',
+    'fine-charges',
+    'due-payment-date',
+    'total-amount',
+    'ticket',
+ );
+
+
 }
 
 ?>

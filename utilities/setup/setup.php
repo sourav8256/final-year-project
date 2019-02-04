@@ -22,4 +22,6 @@ $sql = fread($sql_file, filesize('schema.sql'));
 $conn = new PDO("mysql:host=" . $host . ";dbname=" . $dbname , $user, $pass);
 $conn->exec($sql);
 
+echo "Query Successfully executed!";
+
 ?>
