@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set("Asia/kolkata");
+
 include_once "database.php";
 include_once "data.php";
 
@@ -13,15 +15,19 @@ $_GET['serial'] = 15; */
 /* 
 Quick test url
 
-curl "http://localhost/education/final_year_project/api/savePollutionData.php?chassisNumber=212&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
+curl "http://localhost/education/final_year_project/api/savePollutionData.php?chassisNumber=755845&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
 
-curl "http://vehicleinfo.orgfree.com/intel/api/savePollutionData.php?chassisNumber=212&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
+curl "http://vehicleinfo.orgfree.com/intel/api/savePollutionData.php?chassisNumber=755845&co=2234&co2=2234&hydro-carbons=4500&fine-charges=3000&due-payment-date=234234234&total-amount=3000&ticket=TRQ3322142323"
+
 
 */
 
 //$result['vid'] = $_GET['vid'];
 
 try {
+
+ $_GET['date'] = date("d/m/Y");
+ $_GET['time'] = date("h:i:s a");  
 
  $pollutionData = array();      
  foreach (DBInfo::POLLUTION_FIELDS as $field) {
@@ -33,7 +39,7 @@ try {
  }
 
 
- $query = DB::insertUpdate('poll_data', $pollutionData);
+ $query = DB::insert('poll_data', $pollutionData);
 
 //  $query = DB::insertUpdate('account_data', array(
 //   'serial' => !empty($_GET['serial']) ? $_GET['serial'] : null,

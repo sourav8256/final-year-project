@@ -3,7 +3,7 @@
 /* 
 Quick test url
 
-http://localhost/education/final_year_project/utilities/setup/setup.php
+curl http://localhost/education/final_year_project/utilities/setup/setup.php
 
 curl http://vehicleinfo.orgfree.com/intel/utilities/setup/setup.php
 
