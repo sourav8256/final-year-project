@@ -1,3 +1,38 @@
+-- Adminer 4.7.1 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `account_data`;
+CREATE TABLE `account_data` (
+  `chassisNumber` int(11) NOT NULL,
+  `registrationNumber` int(11) NOT NULL,
+  `modelCategory` int(11) NOT NULL,
+  `drivingLicenceNumber` int(11) NOT NULL,
+  `password` int(11) NOT NULL,
+  `mobileNumber` int(11) NOT NULL,
+  `emergencyNumber` int(11) NOT NULL,
+  `bloodGroup` int(11) NOT NULL,
+  `address` int(11) NOT NULL,
+  `engineType` int(11) NOT NULL,
+  `subscriptionDate` int(11) NOT NULL,
+  `subRenewalDate` int(11) NOT NULL,
+  `duePayment` int(11) NOT NULL,
+  `status` text NOT NULL,
+  PRIMARY KEY (`registrationNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- 2019-03-28 04:03:34
+
+
+
+
+
+
+
 -- Generation time: Tue, 15 Jan 2019 06:21:58 +0530
 -- Host: 127.0.0.1
 -- DB name: final_year_project

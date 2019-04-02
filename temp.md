@@ -16,3 +16,8 @@ http://vehicleinfo.orgfree.com/website/
 
 curl http://vehicleinfo.orgfree.com/intel/api/getPollutionData.php?chassisNumber=755845
 
+
+#adminer
+
+http://localhost/education/final_year_project/api/adminer.php
+
