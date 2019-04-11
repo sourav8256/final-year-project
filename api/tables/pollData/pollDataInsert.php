@@ -1,5 +1,9 @@
 <?php
 
+
+date_default_timezone_set("Asia/Kolkata");
+
+
 include_once "../../database.php";
 include_once "../../data.php";
 
@@ -20,6 +24,24 @@ curl "http://vehicleinfo.orgfree.com/intel/api/saveAccountData.php?chassisNumber
 */
 
 
+function exceedsStandardParameters($data){
+     /* check if parameters are greater than standard parameters */
+  $standardParameters = MODEL_CATEGORY[$data['modelCategory']][$data['engineType']];;
+  
+  if($standardParameters['co'] > $data['co'] || $standardParameters['hco'] > $data['hco'] || $standardParameters['co2'] > $data['co2']){
+     return true;
+  } 
+  
+  return false;
+}
+
+function finesAndAlert(){
+   $timestamp = time();
+   DB::queryRaw("UPDATE account_data SET ticketCount=ticketCount+1,`status`=\"bad\",`lastCheckDate`=$timestamp WHERE `drivingLicenceNumber`=%s","drno");
+   
+}
+
+
 try {
 
  $data = array();      
@@ -28,7 +50,17 @@ try {
  }
 
 
+
+  /* check if parameters are greater than standard parameters */
+  if(exceedsStandardParameters($data)){
+   finesAndAlert();
+  }
+
+
  $query = DB::insertUpdate('message_data', $data);
+
+
+
 
 } catch (Exception $e) {
  $result['result'] = 0;

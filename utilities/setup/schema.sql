@@ -7,6 +7,7 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 DROP TABLE IF EXISTS `account_data`;
 CREATE TABLE `account_data` (
+  `customerName` text NOT NULL,
   `chassisNumber` int(11) NOT NULL,
   `registrationNumber` int(11) NOT NULL,
   `modelCategory` text NOT NULL,
@@ -22,6 +23,8 @@ CREATE TABLE `account_data` (
   `subRenewalDate` int(11) NOT NULL,
   `duePayment` int(11) NOT NULL,
   `status` text NOT NULL,
+  `ticketCount` int(11) NOT NULL,
+  `lastCheckDate` int(11) NOT NULL,
   PRIMARY KEY (`drivingLicenceNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,6 +89,7 @@ CREATE TABLE `message_data` (
   `registrationNumber` varchar(50) NOT NULL,
   `timeAndDate` int(11) NOT NULL,
   `customerName` varchar(250) NOT NULL,
+  `customerContact` int(11) NOT NULL,
   `dueAmount` int(11) NOT NULL,
   `pollutionStatus` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

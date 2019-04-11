@@ -39,9 +39,8 @@ if ($query) {
  $result['result'] = 1;
  $result['message'] = "values inserted successfully";
 } else {
-
  $result['result'] = 0;
- $result['message'] = "Error: 101-Query did not run values not inserted there has been an error.";
+ $result['message'] = "Error: 101-Query did not run values not inserted, there has been an error.";
 }
 
 echo json_encode($result);

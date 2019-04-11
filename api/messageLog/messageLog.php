@@ -15,7 +15,7 @@ include_once "../database.php";
 
 try {
 
-    $drivingLicenceNumber = $_GET['drivingLicenceNumber'];
+    //$drivingLicenceNumber = $_GET['drivingLicenceNumber'];
 
     $query = DB::query("SELECT * FROM message_data");
     foreach($query as $row){

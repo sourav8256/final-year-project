@@ -35,8 +35,23 @@ curl "http://vehicleinfo.orgfree.com/intel/api/saveAccountData.php?chassisNumber
 try {
 
  $accountData = array();      
- foreach (DBInfo::ACCOUNT_FIELDS as $field) { 
+ foreach (DBInfo::ACCOUNT_FIELDS as $field) {
+    
+    if($field == "subscriptionDate"){
+      $accountData[$field] = time();
+    } else if($field == "subRenewalDate"){
+      $accountData[$field] = time();
+    } else if($field == "status"){
+      $accountData[$field] = "GOOD";
+    } else if($field == "ticketCount"){
+      $accountData[$field] = 0;
+    } else if($field == "lastCheckDate"){
+      $accountData[$field] = time();
+   } else if($field == "duePayment"){
+      $accountData[$field] = 0;
+   } else {
     $accountData[$field] = $_GET[$field];
+   }
  }
 
 
@@ -57,7 +72,7 @@ try {
 
 if ($query) {
  $result['result'] = 1;
- $result['message'] = "values fetched successfully";
+ $result['message'] = "values saved successfully";
 } else {
 
  $result['result'] = 0;

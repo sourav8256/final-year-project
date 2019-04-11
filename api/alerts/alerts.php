@@ -15,13 +15,26 @@ include_once "../database.php";
 
 try {
 
-    $drivingLicenceNumber = $_GET['drivingLicenceNumber'];
+    ///$drivingLicenceNumber = $_GET['drivingLicenceNumber'];
 
-    $query = DB::query("SELECT * FROM poll_data WHERE drivingLicenceNumber=\"$drivingLicenceNumber\"");
+
+
+
+    $query = DB::query("SELECT * FROM account_data");
     foreach($query as $row){
-        $result['criticalPollutionLevel'][] = $row;
+        $accountResult[$row['drivingLicenceNumber']][] = $row;
     }
 
+    $query = DB::query("SELECT * FROM poll_data");
+    foreach($query as $row){
+
+        foreach($accountResult[$row['drivingLicenceNumber']][0] as $key=>$value){
+            $row[$key] = $value;
+        }
+        $result['criticalPollutionLevel'][] = $row;
+
+    }
+/* 
     $query = DB::query("SELECT * FROM payment_data WHERE drivingLicenceNumber=\"$drivingLicenceNumber\"");
     foreach($query as $row){
         $result['fineDue'][] = $row;
@@ -30,7 +43,7 @@ try {
     $query = DB::query("SELECT * FROM payment_data WHERE drivingLicenceNumber=\"$drivingLicenceNumber\"");
     foreach($query as $row){
         $result['paymentHistory'][] = $row;
-    }
+    } */
 
 
 } catch(Exception $e) {
@@ -48,6 +61,7 @@ if($query){
 }
 
 echo json_encode($result,JSON_PRETTY_PRINT);
+//print_r($result);
 
 
 

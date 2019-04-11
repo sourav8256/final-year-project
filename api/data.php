@@ -13,6 +13,7 @@ const PASSWORD = "finalYearPass";
 const DBNAME = "1374370";  */
 
    const ACCOUNT_FIELDS = array(
+      'customerName',
       'chassisNumber',
       'registrationNumber',
       'modelCategory',
@@ -28,6 +29,8 @@ const DBNAME = "1374370";  */
       'subRenewalDate',
       'duePayment',
       'status',
+      'ticketCount',
+      'lastCheckDate'
    );
 
    /*
